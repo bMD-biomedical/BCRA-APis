@@ -42,6 +42,4 @@ De esta manera se visualizará en el objeto TextArea el JSON reciido como respue
 La documentación oficial de la API provista por el BCRA con todas las consultas posibles está en:
     http://estadisticasbcra.com/api/documentacion
     
-Mariano Poli
-bMD BioMedical Developments
-www.bmd.com.es
+
