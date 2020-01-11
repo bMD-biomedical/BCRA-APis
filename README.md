@@ -16,13 +16,19 @@ link de registro: http://estadisticasbcra.com/api/registracion
   c) A los efectos de visualizar el resultado de la respuesta de la API (o sea el JSON recibido como respuesta) agregar un TextArea que se podrá llamar por ejemplo txtRespuestaAPI
   
   d) En el evento Action del botón colocamos el siguiente código (por ejemplo para obtener las cotizaciones del dolar oficial):
+  
         Dim url As Text = "https://api.estadisticasbcra.com/usd_of"
-        OpenALPRSocket.RequestHeader("Authorization") = "BEARER token_recibido_del_BCRA" 
+        
+        OpenALPRSocket.RequestHeader("Authorization") = "BEARER token_recibido_del_BCRA"
+        
         OpenALPRSocket.Send("GET", url)
-     Lo que estamos haciendo aqui es definir la URL de la API a consumir, luego poniendo en el Header los codigos de autorizacion necesarios para utilizar el servicio, y por ultimo invocando el servicio
+        
+Lo que estamos haciendo aqui es definir la URL de la API a consumir, luego poniendo en el Header los codigos de autorizacion necesarios para utilizar el servicio, y por ultimo invocando el servicio
   
   e) En el evento PageReceive del HTTPSocket colocamos el siguiente código
+  
         Dim result As Text = Xojo.Core.TextEncoding.UTF8.ConvertDataToText(Content)
+        
         txtRespuestaAPI.Text = result
 
 De esta manera se visualizará en el objeto TextArea el JSON reciido como respuesta, que en este caso contendrá todas las cotizaciones del dolar oficial con la siguiente estructura:
