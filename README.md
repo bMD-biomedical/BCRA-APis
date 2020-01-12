@@ -9,7 +9,7 @@ link de registro: http://estadisticasbcra.com/api/registracion
 
 3- Utilizando XOJO podemos crear una aplicacion donde:
 
-  a) Agregamos un componente HTTPSocket
+  a) Agregamos un componente HTTPSocket que llamamos BCRA_Socket
   
   b) Un botón desde donde invocaremos la API a consumir
   
@@ -19,9 +19,10 @@ link de registro: http://estadisticasbcra.com/api/registracion
   
         Dim url As Text = "https://api.estadisticasbcra.com/usd_of"
         
-        OpenALPRSocket.RequestHeader("Authorization") = "BEARER token_recibido_del_BCRA"
+        BCRA_Socket.RequestHeader("Authorization") = "BEARER token_recibido_del_BCRA"
         
-        OpenALPRSocket.Send("GET", url)
+        BCRA_Socket.Send("GET", url)
+         
         
 Lo que estamos haciendo aqui es definir la URL de la API a consumir, luego poniendo en el Header los codigos de autorizacion necesarios para utilizar el servicio, y por ultimo invocando el servicio
   
