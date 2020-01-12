@@ -1,4 +1,4 @@
-En este documento mostraré como consumir la API del Banco Central de la Republica Argentina con XOJO.
+En este documento mostraré como consumir la API del Banco Central de la Republica Argentina con **XOJO**.
 Esto puede ser muy útil para obtener la cotización Oficial del dolar del día, y varias consultas mas que se mencionaran.
 
 1- Para poder consumir esta API es requisito autenticarse usando un token cada vez que se realice una llamada. Dicho token nos lo provee el BCRA de manera gratuita, solo hay que registrarse con una cuenta de mail.
@@ -32,6 +32,7 @@ Lo que estamos haciendo aqui es definir la URL de la API a consumir, luego ponie
         txtRespuestaAPI.Text = result
 
 De esta manera se visualizará en el objeto TextArea el JSON reciido como respuesta, que en este caso contendrá todas las cotizaciones del dolar oficial con la siguiente estructura:
+
         [
           {
             "d": fecha en formato MySQL,
